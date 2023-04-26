@@ -1,0 +1,70 @@
+@charset "utf-8";
+*{margin: 0px;padding: 0px;}
+li,ul,ol{
+  list-style: none;
+}
+#bar_wrap{
+  background-color: rgb(174, 127, 217);
+  color: #fff;
+  padding: 20px 0px;
+}
+#bar_wrap li{
+  position: relative;
+  width:600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.bar{
+  width:100%;height: 35px;
+  background-color: rgb(122, 33, 149);
+  /* border: solid 2px rgb(222, 213, 213); */
+  line-height: 35px;
+  position: relative;
+  margin-top: 10px;
+}
+
+#bar_wrap li span{
+  margin-top: 10px;
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  width: 35px;height: 35px;
+  background-color: rgb(235, 215, 239);
+}
+
+#bar_wrap > li:first-child > .bar{
+  width: 60%;
+  animation: 3s linear 1s bar;
+}
+#bar_wrap > li:nth-child(2) > .bar{
+  width: 65%;
+}
+#bar_wrap > li:nth-child(3) > .bar{
+  width: 60%;
+}
+#bar_wrap > li:nth-child(4) > .bar{
+  width: 85%;
+}
+#bar_wrap > li:nth-child(5) > .bar{
+  width: 85%;
+}
+#bar_wrap > li:nth-child(6) > .bar{
+  width: 70%;
+}
+#bar_wrap > li:nth-child(7) > .bar{
+  width: 75%;
+}
+#bar_wrap > li:nth-child(8) > .bar{
+  width: 70%;
+}
+#bar_wrap > li:nth-child(9) > .bar{
+  width: 70%;
+}
+#bar_wrap > li:nth-child(10) > .bar{
+  width: 85%;
+}
+#bar_wrap > li:nth-child(11) > .bar{
+  width: 80%;
+}
+

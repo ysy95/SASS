@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+.title01 {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+  font-size: 30px;
+  background-color: #ff0;
+  color: #f00;
+}
+
+.title02 {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+  font-size: 30px;
+  background-color: #ff0;
+  color: #00f;
+}
+
+.p01 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 500px;
+  border: solid 1px #000;
+  background-color: #ff0;
+}
+
+.btn01 {
+  font-family: "궁서체";
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 5px 30px;
+  border-radius: 30px;
+  background-color: #ff0;
+}
+
+.btn02 {
+  font-family: "궁서체";
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 5px 30px;
+  border-radius: 30px;
+  background-color: #0f0;
+}
+
+.btn01:hover, .btn02:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#toggle {
+  width: 50px;
+  height: 50px;
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#toggle span {
+  display: block;
+  height: 3px;
+  width: 35px;
+  background-color: #000;
+  position: absolute;
+  left: 8px;
+  top: 0px;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.bar2 {
+  top: 15px;
+}
+
+#toggle_bar:checked + #toggle > span:first-child {
+  transform: rotate(45deg);
+}
+
+#toggle_bar:checked + #toggle > span:nth-child(2) {
+  display: none;
+}
+
+#toggle_bar:checked + #toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+
+#box01 {
+  font-family: "궁서체";
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #8c8cc3;
+}
+
+#box02 {
+  font-family: "궁서체";
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #494986;
+}
+
+.border {
+  width: 300px;
+  border: 5px double #f00;
+}
+
+table {
+  border-collapse: collapse;
+  background: #f0f0f0;
+  width: 500px;
+}
+
+table caption {
+  background-color: #ff0;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+table tr td {
+  line-height: 210%;
+  text-align: right;
+  padding-right: 20px;
+}
+
+table tbody tr:nth-child(2n+1) {
+  background: #fddc7a;
+}/*# sourceMappingURL=style2.css.map */

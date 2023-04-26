@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+// wrap의 가로크기 변수
+$max-width:1180px;
+
+//12컬럼의 그리드
+//박스가 가지는 컬럼수에 따라 가로크기가 지정되는 함수.
+@function columns($number:1, $all:12){//매개변수2개
+  @return $max-width*($number/$all);  //1180*(1/12)
+
+}
+
+.wrap{
+  width:$max-width;//1180
+  margin:0 auto;
+  border:3px solid #000;
+  .box01{
+    width: columns( );//$number/$all 12개중에 하나만 나옴.
+    background: #f00; 
+    height: 100px;
+  }
+  .box02{
+    width: columns(6);// - 6개 : 6/12 
+    background: #0f0; 
+    height: 100px;
+  }
+  .box03{
+    width: columns(12); //- 12개 : 12/12
+    background: #00f; 
+    height: 100px;
+  }
+}
+
+//내장함수로 서식변경하기
+$mainColor:#e134ad;
+.button{
+  border:none;
+  padding:5px 20px;
+  border-radius: 5px;
+  background-color: $mainColor;
+  color:#fff;
+  &.btn02{//내장함수를 사용해서 같이 연결된 서식명에 적용. 
+    background-color: lighten($mainColor, 20%); //투명도 20%줌.
+  }
+}
+
+@function my-lighten($num){
+  @return 0.1*$num;
+}
+.btn03{
+  opacity:my-lighten(2);
+}
+
+

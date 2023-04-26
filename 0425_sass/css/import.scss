@@ -1,0 +1,81 @@
+// import.scss파일
+@charset "utf-8";
+@import "style";
+*{padding:0px;margin: 0px;}
+ul,li,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  margin-left: 40px;
+  position: relative;
+}
+
+h2{
+  font-size: $bigFontSize;
+  color: $baseFontColor;
+  background: #f0f;
+}
+
+$fontSize:14px;
+$lineHeight:35px;
+$textAlign:center;
+$btnWidth:200px;
+$btnHeight:34px;
+$borderLine:none;
+$borderRadius:5px;
+$baseColor01:#fff;
+$baseColor02:#333;
+
+@mixin btn {
+  width: $btnWidth;
+  height: $btnHeight;
+  text-align: $textAlign;
+  line-height: $lineHeight;
+  border: $borderLine;
+  border-radius: $borderRadius;
+  color:$baseColor01;
+  font-size: $fontSize;
+  display: block;
+}
+
+#login{
+  @include btn;
+  background-color: #f00;
+}
+#naver{
+  @include btn;
+  background-color: rgb(60, 188, 60);
+}
+#kakao{
+  @include btn;
+  background-color: #fbe201;
+  color: $baseColor02;
+}
+ul{
+  display: flex;
+  margin-top: 30px;
+}
+
+.icon{
+  width: 150px;height: 150px;
+  position: absolute;
+  top: 0px;left: -30px;
+  border-radius: $borderRadius;
+}
+.naver_icon{
+  background-image: url('../img/sns_icon.png');
+  background-size:1580%;
+  background-repeat: no-repeat;
+  background-position: 63% 22.2%;
+  background-color:#fff;
+  
+
+}
+.kakao_icon{
+  background-image: url('../img/sns_icon.png');
+  // background-size:;
+  background-repeat: no-repeat;
+  background-position: 27% 62%;
+  background-color: #fbe201;
+}

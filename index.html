@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sass</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    body{
+      font-family: "맑은 고딕",arial,sans-serif;
+      font-size:12px;
+      color:#333333;
+    }
+    h1, h2{ text-align:center;}
+    h1 img{width:160px;}
+    h2{line-height:40px;}
+
+    /* 테두리 선 */
+    .border01{
+      border-top:3px solid #cf649a;
+      border-bottom:3px solid #cf649a;
+    }
+    /* 제목 배경 */
+    .bgcolor01{background:#cf649a;}
+    dl{text-indent:10px;}
+    dt{
+      font-size:14px;
+      color:#fff;
+      padding:12px 0px;
+      font-weight: bold;
+      border-bottom:1px solid #cf649a;
+    }
+    dd{ 
+      border-bottom:1px solid #cf649a;
+      text-indent:16px;
+    }
+    dd > a{
+      display:block;
+      font-size:13px;
+      line-height:40px;
+      color:#333333;
+      text-decoration:none;
+    }
+    dd > a:hover{
+      background-color:beige;
+    }
+    footer{
+      background-color:#5f5e5e;
+      color:#ffffff;
+      text-align:center;
+      line-height:50px;
+    }
+    footer > address{font-style:normal;}
+  </style>
+</head>
+<body>
+  <header>
+  <h1>
+    <a href="index.html" title="메인화면으로 바로가기">
+      <img src="./sass_logo.png" alt="메인로고"></h1>
+    </a>
+  </header>
+
+  <main>
+    <h2>SASS</h2>
+    <section class="border01">
+      <dl>
+        <dt class="bgcolor01">1일차 - SASS소개와 문법, 믹싱기법</dt>
+        <dd><a href="./0424_sass/01_sass소개와 문법.html" title="">sass소개와 문법, livesass compiler</a></dd>
+        <dd><a href="./0424_sass/02_sass문법 -믹싱기법.html" title="">02_믹싱기법 - @mixin, @include</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor01">2일차 - 변수의 개념, 중첩규칙</dt>
+        <dd><a href="./0425_sass/01_sass_변수개념.html" title="">01_변수의 선언과 활용</a></dd>
+        <dd><a href="./0425_sass/02_sass_중첩규칙.html" title="">02_중첩규칙(nesting)</a></dd>
+        <dd><a href="./0425_sass/03_sass_import(외부sass삽입).html" title="">03_ @import(외부sass삽입)</a></dd>
+        <dd><a href="./0425_sass/Jquery - tabcontents.html" title="">실습예제 - 탭메뉴콘텐츠 만들기</a></dd>
+      </dl>
+      <dl>
+        <dt class="bgcolor01">3일차 - 함수,if문, 반복문(for, while)</dt>
+        <dd><a href="./0426_sass/01_sass_function.html" title="">01_함수(@function)</a></dd>
+        <dd><a href="./0426_sass/02_sass함수문법(if문).html" title="">02_조건문(@if,@else,@else if)</a></dd>
+        <dd><a href="./0426_sass/03_sass함수문법(반복문과 배열).html" title="">03_sass반복문(@for, @while)</a></dd>
+        <dd><a href="./0426_sass/exec.html" title="">실습예제</a></dd>
+      </dl>
+
+</body>
+</html>

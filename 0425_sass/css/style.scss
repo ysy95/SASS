@@ -1,0 +1,33 @@
+@charset "utf-8";
+//변수생성
+
+$myFont:'맑은 고딕',arial, sans-serif;
+$baseFontColor:#333;
+$bigFontSize:30px;
+$baseFontSize:12px;
+$boxWidth:1025px;
+$boxCenter:0px auto;
+$bgColor:#0f0;
+
+body{
+  font-family: $myFont;
+  font-size: $baseFontSize;
+  color: $baseFontColor;
+}
+
+h1{font-size: $bigFontSize;}
+#wrap{
+  width:$boxWidth;
+
+  $bgcolor01: #ccc;
+  background-color: $bgcolor01;
+  margin: $boxCenter;
+  border:1px solid $bgcolor01;
+
+}
+
+p{
+  // 위 wrap에서 지역변수로 사용되기 때문에 아래 서식은 적용안됨. 
+  // background: $bgcolor01;
+}
+

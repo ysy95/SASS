@@ -1,0 +1,82 @@
+$widths:(
+  'mobile':(max-width:767px),
+  'tablet-small':(min-width:768px),
+  'tablet-large':(max-width:1024px),
+  'pc-small':(min-width:1025px)
+);
+
+
+$h_bgColor:lightblue;
+$f_bgColor:orange;
+$baColor01:#6b0e0e;
+$baColor02:#3cb340;
+$width1:940px;
+$width2:100%;
+$height1:380px;
+$height:150px;
+
+
+
+
+// @function columns($number:1, $all:3){//매개변수2개
+//   @return $max-width*($number/$all);  //1180*(1/12)
+// }
+header{
+  width:100%;height: 80px;
+  background-color: $h_bgColor;
+}
+footer{
+  width:100%;
+  height: 110px;
+  background-color: $f_bgColor;
+}
+@mixin box{
+  width:100%;
+  height:270px;
+  background-color: $baColor01;
+  margin-top: 5px;
+}
+.box{
+  @include box;
+}
+
+@mixin box2{
+  width:100%;
+  height: 150px;
+  background-color: $baColor02;
+  margin-top: 5px;
+}
+.box2{
+  @include box2;
+}
+
+@mixin respond-to($name){
+  @if map-has-key($widths, $name){
+    @media only all and #{inspect(map-get($widths,$name))}{
+      @content;
+    }
+  }
+  @else{
+    
+  }
+}
+
+// @mixin respond($name){
+//   @if $name == mobile{
+//     @media only screen and (max-width:$mobile){
+//       .con{
+//         width: columns(3); //- 12개 : 12/12
+//         margin-left: 5px;
+//         height: 270px; 
+//       }
+//     }
+//   }@else if $name == tablet{
+//     @media only screen and (min-width:$tablet) and (max-width:$PC-1){@content;}
+//   }@else if $name == pc {
+//     @media only screen and (min-width: $PC) { @content; }
+//   }@else if $name == mt{
+//     @media only screen and (max-width:$PC-1){@content;}
+//   }@else if $name == tp{
+//     @media only screen and (min-width:$tablet){@content;}
+//   }
+// }
